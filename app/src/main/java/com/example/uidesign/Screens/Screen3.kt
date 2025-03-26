@@ -2,6 +2,8 @@ package com.example.uidesign.Screens
 
 
 import android.annotation.SuppressLint
+import androidx.compose.animation.core.FastOutSlowInEasing
+import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -13,11 +15,17 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableFloatStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -35,6 +43,13 @@ import com.example.uidesign.R
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
 fun Screen3(navController: NavHostController) {
+
+    var progress by remember { mutableFloatStateOf(1f) } // 100% progress
+
+    val animatedProgress by animateFloatAsState(
+        targetValue = progress,
+        animationSpec = androidx.compose.animation.core.tween(durationMillis = 800, easing = FastOutSlowInEasing) // 2-second animation
+    )
 
     Column(
         modifier = Modifier
@@ -88,8 +103,19 @@ fun Screen3(navController: NavHostController) {
                 textAlign = TextAlign.Center
 
             )
+
+            Spacer(modifier = Modifier.height(72.dp))
+
+            //progress bar
+            LinearProgressIndicator(
+                progress = animatedProgress,
+                modifier = Modifier.width(200.dp),
+                color = Color(0xFF166E05)
+            )
+
+
         }
-        Spacer(modifier = Modifier.height(50.dp))
+        Spacer(modifier = Modifier.height(24.dp))
         Row(
             modifier = Modifier
                 .fillMaxWidth(),

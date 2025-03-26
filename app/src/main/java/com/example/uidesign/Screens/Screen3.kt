@@ -22,6 +22,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -69,8 +70,7 @@ fun Screen3(navController: NavHostController) {
             )
             Spacer(modifier = Modifier.height(16.dp))
             Text(
-                text = "Create your own \n" +
-                        "study plan",
+                text = stringResource(R.string.S3h1),
                 fontWeight = FontWeight.ExtraBold,
                 fontFamily = FontFamily.SansSerif,
                 textAlign = TextAlign.Center,
@@ -80,9 +80,7 @@ fun Screen3(navController: NavHostController) {
             )
             Spacer(modifier = Modifier.height(18.dp))
             Text(
-                text = "Study according to the \n" +
-                        "study plan, make study \n" +
-                        "more motivated",
+                text = stringResource(R.string.S3h2),
                 fontFamily = FontFamily.SansSerif,
                 color = Color(0xFFF5EAFF),
                 fontSize = 15.sp,
@@ -108,7 +106,7 @@ fun Screen3(navController: NavHostController) {
                 modifier = Modifier.size(150.dp, 50.dp)
             ) {
                 Text(
-                    text = "Sign up",
+                    text = stringResource(R.string.SignUp),
                     color = Color.White,
                 )
 
@@ -124,7 +122,7 @@ fun Screen3(navController: NavHostController) {
 
                 ) {
                 Text(
-                    text = "Log in",
+                    text = stringResource(R.string.Login),
                     color = Color.White,
 
                     )

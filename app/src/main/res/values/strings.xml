@@ -1,3 +1,27 @@
 <resources>
-    <string name="app_name">UIDesign</string>
+
+    <string name="app_name">Course App</string>
+    <string name="Skip">Skip</string>
+    <string name="S1h1">Numerous free trial courses</string>
+    <string name="S1h2">Free courses for you to find your way to learning</string>
+    <string name="S2h1">Quick and easy learning</string>
+    <string name="S2h2">Easy and fast learning at any time to help you improve various skills</string>
+    <string name="S3h1">Create your own study plan</string>
+    <string name="S3h2">Study according to the study plan, make study more motivated</string>
+    <string name="SignUp">Sign up</string>
+    <string name="Login">Log in</string>
+    <string name="SignUph1">SIGN UP</string>
+    <string name="SignUph2">Enter your details below and free sign up</string>
+    <string name="Email">Your Email</string>
+    <string name="EmailPH">Enter Email Address</string>
+    <string name="Password">Password</string>
+    <string name="PasswordPH">Enter Password</string>
+    <string name="CreateAccount">Create account</string>
+    <string name="Terms">By creating an account you agree to our terms and conditions.</string>
+    <string name="HaveAccount">Already have an account?</string>
+    <string name="LogInh1">LOG IN</string>
+    <string name="Forget">Forget Password?</string>
+    <string name="NoAccount">Don\'t have an account?</string>
+    <string name="LogWith">Or login with</string>
+
 </resources>

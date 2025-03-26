@@ -30,6 +30,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -55,7 +56,7 @@ fun Login(navController: NavHostController) {
         ) {
 
             Text(
-                text = "LOG IN",
+                text = stringResource(com.example.uidesign.R.string.LogInh1),
                 fontSize = 30.sp,
                 fontWeight = FontWeight.ExtraBold,
                 color = Color.White,
@@ -76,7 +77,7 @@ fun Login(navController: NavHostController) {
             ) {
                 Column {
 
-                    Text(text = "Your Email", color = Color.LightGray)
+                    Text(text = stringResource(com.example.uidesign.R.string.Email), color = Color.LightGray)
                     TextField(
                         value = email,
                         onValueChange = { email = it },
@@ -86,14 +87,14 @@ fun Login(navController: NavHostController) {
                             .background(Color(0xFF354033)),
 
                         placeholder = {
-                            Text(text = "Email Address", color = Color.LightGray, fontSize = 14.sp)
+                            Text(text = stringResource(com.example.uidesign.R.string.EmailPH), color = Color.LightGray, fontSize = 14.sp)
                         },
                     )
 
                     Spacer(modifier = Modifier.height(20.dp))
 
                     // حقل كلمة المرور
-                    Text(text = "Password", color = Color.LightGray)
+                    Text(text = stringResource(com.example.uidesign.R.string.Password), color = Color.LightGray)
                     TextField(
                         value = password,
                         onValueChange = { password = it },
@@ -101,7 +102,7 @@ fun Login(navController: NavHostController) {
                             .fillMaxWidth()
                             .height(56.dp),
                         placeholder = {
-                            Text(text = "Password", color = Color.LightGray, fontSize = 14.sp)
+                            Text(text = stringResource(com.example.uidesign.R.string.PasswordPH), color = Color.LightGray, fontSize = 14.sp)
                         },
                         trailingIcon = {
                             Icon(
@@ -115,7 +116,7 @@ fun Login(navController: NavHostController) {
                     Spacer(modifier = Modifier.height(20.dp))
 
                     Text(
-                        text = "Forget Password?",
+                        text = stringResource(com.example.uidesign.R.string.Forget),
                         fontSize = 12.sp,
                         color = Color.Gray,
                         modifier = Modifier
@@ -134,7 +135,7 @@ fun Login(navController: NavHostController) {
                             .fillMaxWidth()
                             .height(50.dp)
                     ) {
-                        Text(text = "Log in", fontSize = 18.sp, color = Color.White)
+                        Text(text = stringResource(com.example.uidesign.R.string.Login), fontSize = 18.sp, color = Color.White)
                     }
 
 
@@ -145,12 +146,12 @@ fun Login(navController: NavHostController) {
                         horizontalArrangement = Arrangement.Center
                     ) {
                         Text(
-                            text = "Don't have an account?",
+                            text = stringResource(com.example.uidesign.R.string.NoAccount),
                             fontSize = 12.sp,
                             color = Color.LightGray
                         )
                         Text(
-                            text = "  Sign up",
+                            text = stringResource(com.example.uidesign.R.string.SignUp),
                             fontSize = 12.sp,
                             fontWeight = FontWeight.Bold,
                             color = Color(0xFF166E05),
@@ -160,7 +161,7 @@ fun Login(navController: NavHostController) {
                     Spacer(modifier = Modifier.height(25.dp))
 
                     Text(
-                        text = "Or login with",
+                        text = stringResource(com.example.uidesign.R.string.LogWith),
                         fontSize = 12.sp,
                         color = Color.LightGray,
                         modifier = Modifier.align(Alignment.CenterHorizontally)

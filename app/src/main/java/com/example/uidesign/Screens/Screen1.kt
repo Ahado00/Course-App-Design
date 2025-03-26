@@ -20,6 +20,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -47,7 +48,7 @@ fun Screen1(navController: NavHostController) {
 
         ) {
             Text(
-                text = "Skip",
+                text = stringResource(R.string.Skip),
                 textAlign = TextAlign.End,
                 color = Color(0xFFF5EAFF),
                 fontFamily = FontFamily.SansSerif,
@@ -70,8 +71,7 @@ fun Screen1(navController: NavHostController) {
             )
             Spacer(modifier = Modifier.height(16.dp))
             Text(
-                text = "Numerous free\n" +
-                        "trial courses",
+                text = stringResource(R.string.S1h1),
                 fontWeight = FontWeight.ExtraBold,
                 fontFamily = FontFamily.SansSerif,
                 textAlign = TextAlign.Center,
@@ -81,8 +81,7 @@ fun Screen1(navController: NavHostController) {
             )
             Spacer(modifier = Modifier.height(18.dp))
             Text(
-                text = "Free courses for you to \n" +
-                        "find your way to learning",
+                text = stringResource(R.string.S1h2),
                 fontFamily = FontFamily.SansSerif,
                 color = Color(0xFFF5EAFF),
                 fontSize = 15.sp,

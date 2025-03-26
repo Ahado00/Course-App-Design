@@ -30,6 +30,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -57,7 +58,7 @@ fun SignUp(navController: NavHostController) {
         ) {
 
             Text(
-                text = "SIGN UP",
+                text = stringResource(com.example.uidesign.R.string.SignUph1),
                 fontSize = 30.sp,
                 fontWeight = FontWeight.ExtraBold,
                 color = Color.White,
@@ -66,7 +67,7 @@ fun SignUp(navController: NavHostController) {
             )
 
             Text(
-                text = "Enter your details below & free sign up",
+                text = stringResource(com.example.uidesign.R.string.SignUph2),
                 fontSize = 12.sp,
                 color = Color(0xFFB8B8D2)
             )
@@ -82,7 +83,7 @@ fun SignUp(navController: NavHostController) {
             ) {
                 Column {
 
-                    Text(text = "Your Email", color = Color.LightGray)
+                    Text(stringResource(com.example.uidesign.R.string.Email), color = Color.LightGray)
                     TextField(
                         value = email,
                         onValueChange = { email = it },
@@ -92,14 +93,14 @@ fun SignUp(navController: NavHostController) {
                             .background(Color(0xFF354033)),
 
                         placeholder = {
-                            Text(text = "Email Address", color = Color.LightGray, fontSize = 14.sp)
+                            Text(stringResource(com.example.uidesign.R.string.EmailPH), color = Color.LightGray, fontSize = 14.sp)
                         },
                     )
 
                     Spacer(modifier = Modifier.height(20.dp))
 
                     // حقل كلمة المرور
-                    Text(text = "Password", color = Color.LightGray)
+                    Text(stringResource(com.example.uidesign.R.string.Password), color = Color.LightGray)
                     TextField(
                         value = password,
                         onValueChange = { password = it },
@@ -107,7 +108,7 @@ fun SignUp(navController: NavHostController) {
                             .fillMaxWidth()
                             .height(56.dp),
                         placeholder = {
-                            Text(text = "Password", color = Color.LightGray, fontSize = 14.sp)
+                            Text(stringResource(com.example.uidesign.R.string.PasswordPH), color = Color.LightGray, fontSize = 14.sp)
                         },
                         trailingIcon = {
                             Icon(
@@ -129,7 +130,7 @@ fun SignUp(navController: NavHostController) {
                             .fillMaxWidth()
                             .height(50.dp)
                     ) {
-                        Text(text = "Create account", fontSize = 18.sp, color = Color.White)
+                        Text(stringResource(com.example.uidesign.R.string.CreateAccount), fontSize = 18.sp, color = Color.White)
                     }
 
                     Spacer(modifier = Modifier.height(16.dp))
@@ -148,7 +149,7 @@ fun SignUp(navController: NavHostController) {
                             )
                         )
                         Text(
-                            text = "By creating an account you agree to our terms & conditions.",
+                            text = stringResource(com.example.uidesign.R.string.Terms),
                             fontSize = 12.sp,
                             color = Color.Gray,
                             modifier = Modifier.padding(start = 8.dp)
@@ -162,12 +163,12 @@ fun SignUp(navController: NavHostController) {
                         horizontalArrangement = Arrangement.Center
                     ) {
                         Text(
-                            text = "Already have an account?",
+                            text = stringResource(com.example.uidesign.R.string.HaveAccount),
                             fontSize = 12.sp,
                             color = Color.LightGray
                         )
                         Text(
-                            text = "  Login",
+                            text = stringResource(com.example.uidesign.R.string.Login),
                             fontSize = 12.sp,
                             fontWeight = FontWeight.Bold,
                             color = Color(0xFF166E05),

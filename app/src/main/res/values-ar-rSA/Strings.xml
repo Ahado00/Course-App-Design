@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">تطبيق تعليمي</string>
+    <string name="Skip">تخطي</string>
+    <string name="S1h1">العديد من الدورات التجريبية المجانية</string>
+    <string name="S1h2">دورات مجانية تساعدك على إيجاد طريقك نحو التعلم</string>
+    <string name="S2h1">تعلم سهل وسريع</string>
+    <string name="S2h2">تعلم سهل وسريع في أي وقت لمساعدتك على تحسين مهارات مختلفة</string>
+    <string name="S3h1">إنشاء خطة الدراسة الخاصة بك</string>
+    <string name="S3h2">الدراسة وفقًا لخطة الدراسة تجعل الدراسة أكثر تحفيزًا</string>
+    <string name="SignUp">انشئ حساب</string>
+    <string name="Login">تسجيل دخول</string>
+    <string name="SignUph1">انشاء الحساب</string>
+    <string name="SignUph2">ادخل بياناتك أدناه وسجل دحولك مجانًا</string>
+    <string name="Email">بريد الإلكتروني</string>
+    <string name="EmailPH">أدخل بريدك الإلكتروني</string>
+    <string name="Password">رقم سري</string>
+    <string name="PasswordPH">أدخل رقمك السري</string>
+    <string name="CreateAccount">انشئ الحساب</string>
+    <string name="Terms">من خلال إنشاء حساب فإنك توافق على الشروط والأحكام الخاصة بنا.</string>
+    <string name="HaveAccount">لديك حساب بالفعل؟</string>
+    <string name="LogInh1">تسجيل دخول</string>
+    <string name="Forget">هل نسيت كلمة المرور؟</string>
+    <string name="NoAccount">ليس لديك حساب؟</string>
+    <string name="LogWith">تسجيل الدخول باستخدام</string>
+
+</resources>

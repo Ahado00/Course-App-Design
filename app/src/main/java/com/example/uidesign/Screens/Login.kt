@@ -1,6 +1,8 @@
 package com.example.uidesign.Screens
 
 
+import android.util.Log
+import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -29,6 +31,8 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.graphicsLayer
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -36,6 +40,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
+import com.google.firebase.messaging.FirebaseMessaging
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -43,6 +48,8 @@ fun Login(navController: NavHostController) {
 
     var email by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
+
+    val context = LocalContext.current
 
 
     Box(
@@ -77,7 +84,10 @@ fun Login(navController: NavHostController) {
             ) {
                 Column {
 
-                    Text(text = stringResource(com.example.uidesign.R.string.Email), color = Color.LightGray)
+                    Text(
+                        text = stringResource(com.example.uidesign.R.string.Email),
+                        color = Color.LightGray
+                    )
                     TextField(
                         value = email,
                         onValueChange = { email = it },
@@ -87,14 +97,21 @@ fun Login(navController: NavHostController) {
                             .background(Color(0xFF354033)),
 
                         placeholder = {
-                            Text(text = stringResource(com.example.uidesign.R.string.EmailPH), color = Color.LightGray, fontSize = 14.sp)
+                            Text(
+                                text = stringResource(com.example.uidesign.R.string.EmailPH),
+                                color = Color.LightGray,
+                                fontSize = 14.sp
+                            )
                         },
                     )
 
                     Spacer(modifier = Modifier.height(20.dp))
 
                     // حقل كلمة المرور
-                    Text(text = stringResource(com.example.uidesign.R.string.Password), color = Color.LightGray)
+                    Text(
+                        text = stringResource(com.example.uidesign.R.string.Password),
+                        color = Color.LightGray
+                    )
                     TextField(
                         value = password,
                         onValueChange = { password = it },
@@ -102,7 +119,11 @@ fun Login(navController: NavHostController) {
                             .fillMaxWidth()
                             .height(56.dp),
                         placeholder = {
-                            Text(text = stringResource(com.example.uidesign.R.string.PasswordPH), color = Color.LightGray, fontSize = 14.sp)
+                            Text(
+                                text = stringResource(com.example.uidesign.R.string.PasswordPH),
+                                color = Color.LightGray,
+                                fontSize = 14.sp
+                            )
                         },
                         trailingIcon = {
                             Icon(
@@ -128,14 +149,26 @@ fun Login(navController: NavHostController) {
                     Spacer(modifier = Modifier.height(20.dp))
 
                     Button(
-                        onClick = { /* TODO: Add sign up logic */ },
+                        onClick = {
+                            FirebaseMessaging.getInstance().token.addOnCompleteListener { task ->
+                                if (task.isSuccessful) {
+                                    val token = task.result
+                                    Log.d("FCM", "Login Token: $token")
+
+                                }
+                            }
+                        },
                         shape = RoundedCornerShape(10.dp),
                         colors = ButtonDefaults.buttonColors(Color(0xFF166E05)),
                         modifier = Modifier
                             .fillMaxWidth()
                             .height(50.dp)
                     ) {
-                        Text(text = stringResource(com.example.uidesign.R.string.Login), fontSize = 18.sp, color = Color.White)
+                        Text(
+                            text = stringResource(com.example.uidesign.R.string.Login),
+                            fontSize = 18.sp,
+                            color = Color.White
+                        )
                     }
 
 
